@@ -8,5 +8,5 @@
     "body-parser": ">= 0.1.0",
     "node-gyp": ">= 0.1.0"
   },
-  "engine": "node 0.4.1"
+  "engine": "node 0.10.33"
 }
