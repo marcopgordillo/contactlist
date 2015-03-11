@@ -10,7 +10,9 @@ var bodyParser = require('body-parser');
 	res.send("Hello world from server.js");
 });*/
 
-app.use(express.static(__dirname = "./public"));
+var cacheTime = 86400000*7;     // 7 days
+
+app.use(express.static(__dirname = "./public", { maxAge: cacheTime }));
 app.use(bodyParser.json());
 
 app.get('/contactlist', function (req, res) {

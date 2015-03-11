@@ -12,7 +12,7 @@ myApp.controller('AppCtrl', ['$scope', '$http', function ($scope, $http) {
 			//console.log("I got the data I requested");
 			$scope.contactlist = response;
 			deselect();
-			$scope.$invalidu = true;
+			$scope.invalidu = true;
 		});
 	};
 	
@@ -38,8 +38,8 @@ myApp.controller('AppCtrl', ['$scope', '$http', function ($scope, $http) {
 		$http.get('/contactlist/'+ id).success(function (response) {
 			$scope.contact = response;
 		});
-		$scope.$invalid = true;
-		$scope.$invalidu = false;
+		$scope.invalid = true;
+		$scope.invalidu = false;
 	};
 
 	$scope.update = function () {
@@ -48,7 +48,7 @@ myApp.controller('AppCtrl', ['$scope', '$http', function ($scope, $http) {
 			refresh();
 			deselect();		
 		});
-		$scope.$invalid = false;
+		$scope.invalid = false;
 	};	
 
 	/*var contactlist = [
