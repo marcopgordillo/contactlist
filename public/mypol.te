@@ -1,0 +1,15 @@
+
+module mypol 1.0;
+
+require {
+	type var_t;
+	type abrt_t;
+	type setroubleshootd_t;
+	class file { read write lock };
+}
+
+#============= abrt_t ==============
+allow abrt_t var_t:file { read write };
+
+#============= setroubleshootd_t ==============
+allow setroubleshootd_t var_t:file { read lock write };
